@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center">
         <Link href="/">
           <a className="mr-8 flex items-center space-x-2">
-            <span className="font-bold text-xl text-primary">AISee</span>
+            <span className="jp-heading font-bold text-xl text-primary">AISee</span>
           </a>
         </Link>
         <NavigationMenu className="hidden md:flex">
@@ -46,7 +46,7 @@ export default function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
         <div className="flex-1" />
-        <Button asChild className="hidden md:flex">
+        <Button asChild className="hidden md:flex rounded-none">
           <Link href="/contact">お問い合わせ</Link>
         </Button>
       </div>
