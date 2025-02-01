@@ -13,6 +13,7 @@ export default function Navbar() {
   const navItems = [
     { href: "/", label: "ホーム" },
     { href: "/services", label: "サービス" },
+    { href: "/blog", label: "ブログ" },
     { href: "/company", label: "会社概要" },
     { href: "/contact", label: "お問い合わせ" },
   ];
