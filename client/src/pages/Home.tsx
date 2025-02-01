@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, LineChart, Clock } from "lucide-react";
+import { Brain, LineChart, Clock, Users, Building2, FileSpreadsheet } from "lucide-react";
 
 export default function Home() {
   return (
@@ -77,6 +77,85 @@ export default function Home() {
                   導入後もしっかりとしたサポート体制で
                   安心してご利用いただけます。
                 </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* AI活用事例 Section */}
+      <section className="py-20 jp-pattern">
+        <div className="container">
+          <h2 className="jp-heading text-3xl font-bold text-center mb-4">
+            AI活用事例
+          </h2>
+          <p className="text-center text-muted-foreground mb-12">
+            様々な業務シーンでAIを活用し、効率化を実現します
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-none shadow-lg rounded-none">
+              <CardContent className="pt-6">
+                <Users className="w-12 h-12 text-primary mb-4" />
+                <h3 className="jp-heading text-xl font-bold mb-2">
+                  カスタマーサクセス
+                </h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• 顧客対応が属人的で、解約兆候を見逃す</li>
+                  <li>• FAQの整備が不十分で問い合わせが多い</li>
+                  <li>• 顧客ごとの適切なフォローアップ施策を提案</li>
+                </ul>
+                <div className="mt-4 text-primary font-medium">
+                  AI解決策：
+                </div>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>✓ 過去の会話ログから解約リスクのある顧客を特定</li>
+                  <li>✓ FAQの自動作成（問い合わせ履歴をもとに改善）</li>
+                  <li>✓ 顧客ごとに最適なフォローアップ施策を提案</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg rounded-none">
+              <CardContent className="pt-6">
+                <Building2 className="w-12 h-12 text-primary mb-4" />
+                <h3 className="jp-heading text-xl font-bold mb-2">
+                  人事・採用
+                </h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• 求人票作成が属人的で応募数にバラつきがある</li>
+                  <li>• 書類選考者に時間がかかりすぎる</li>
+                  <li>• 候補者との面接対応に手間がかかる</li>
+                </ul>
+                <div className="mt-4 text-primary font-medium">
+                  AI解決策：
+                </div>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>✓ 効果分析をもとに魅力的な求人票を自動作成</li>
+                  <li>✓ 職務経歴書を自動スクリーニング（合格率予測）</li>
+                  <li>✓ 候補者との初期的面接質問対応を生成</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-none shadow-lg rounded-none">
+              <CardContent className="pt-6">
+                <FileSpreadsheet className="w-12 h-12 text-primary mb-4" />
+                <h3 className="jp-heading text-xl font-bold mb-2">
+                  事務・経理・財務
+                </h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• 経費精算が手間（領収書整理・チェック）</li>
+                  <li>• キャッシュフローの予測が不正確</li>
+                  <li>• 財務レポートが机上の空論になりがち</li>
+                </ul>
+                <div className="mt-4 text-primary font-medium">
+                  AI解決策：
+                </div>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>✓ 領収書の自動認識・経費チェック</li>
+                  <li>✓ 収支データから将来予測を分析</li>
+                  <li>✓ 財務レポートを自動生成し経営判断を支援</li>
+                </ul>
               </CardContent>
             </Card>
           </div>
