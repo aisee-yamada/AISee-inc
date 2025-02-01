@@ -8,7 +8,8 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center jp-pattern">
+      <section className="relative min-h-[80vh] flex items-center jp-wood">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -16,21 +17,26 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
-            <h1 className="jp-heading text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            <h1 className="jp-heading text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
               伝統と革新の融合<br />
               <span className="text-primary">AI技術</span>で<br />
               ビジネスを進化させる
             </h1>
-            <p className="text-xl mb-8 text-muted-foreground leading-relaxed">
+            <p className="text-xl mb-8 text-gray-300 leading-relaxed">
               AISeeは、最新のAI技術を活用して<br />
               企業の業務効率化をサポートします
             </p>
-            <Button asChild size="lg" className="rounded-none">
+            <Button asChild size="lg" className="rounded-none bg-white text-black hover:bg-gray-100">
               <Link href="/contact">無料相談はこちら</Link>
             </Button>
           </motion.div>
         </div>
-        <div className="absolute right-0 bottom-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-bottom-right" />
+        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20">
+          <div className="w-full h-full" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }} />
+        </div>
       </section>
 
       {/* Features Section */}
