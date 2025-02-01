@@ -8,8 +8,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center jp-wood">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30" />
+      <section className="relative min-h-[80vh] flex items-center bg-background">
         <div className="container relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -17,42 +16,37 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
-            <h1 className="jp-heading text-4xl md:text-6xl font-bold mb-6 tracking-tight text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
               伝統と革新の融合<br />
               <span className="text-primary">AI技術</span>で<br />
               ビジネスを進化させる
             </h1>
-            <p className="text-xl mb-8 text-gray-300 leading-relaxed">
+            <p className="text-xl mb-8 text-muted-foreground leading-relaxed">
               AISeeは、最新のAI技術を活用して<br />
               企業の業務効率化をサポートします
             </p>
-            <Button asChild size="lg" className="rounded-none bg-white text-black hover:bg-gray-100">
+            <Button asChild size="lg">
               <Link href="/contact">無料相談はこちら</Link>
             </Button>
           </motion.div>
         </div>
-        <div className="absolute right-0 top-0 w-1/2 h-full opacity-20">
-          <div className="w-full h-full" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '60px 60px'
-          }} />
-        </div>
+        <div className="absolute right-0 bottom-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform origin-bottom-right" />
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-muted/30">
         <div className="container">
-          <h2 className="jp-heading text-3xl font-bold text-center mb-4">
+          <h2 className="text-3xl font-bold text-center mb-4">
             AISeeが選ばれる理由
           </h2>
           <p className="text-center text-muted-foreground mb-12">
             確かな技術と実績で、お客様のビジネスをサポートします
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg rounded-none">
+            <Card>
               <CardContent className="pt-6">
                 <Brain className="w-12 h-12 text-primary mb-4" />
-                <h3 className="jp-heading text-xl font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   最新AI技術の活用
                 </h3>
                 <p className="text-muted-foreground">
@@ -61,10 +55,10 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-none shadow-lg rounded-none">
+            <Card>
               <CardContent className="pt-6">
                 <LineChart className="w-12 h-12 text-primary mb-4" />
-                <h3 className="jp-heading text-xl font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   実績のある改善手法
                 </h3>
                 <p className="text-muted-foreground">
@@ -73,10 +67,10 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-none shadow-lg rounded-none">
+            <Card>
               <CardContent className="pt-6">
                 <Clock className="w-12 h-12 text-primary mb-4" />
-                <h3 className="jp-heading text-xl font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   迅速なサポート体制
                 </h3>
                 <p className="text-muted-foreground">
@@ -90,19 +84,19 @@ export default function Home() {
       </section>
 
       {/* AI活用事例 Section */}
-      <section className="py-20 jp-pattern">
+      <section className="py-20 bg-background">
         <div className="container">
-          <h2 className="jp-heading text-3xl font-bold text-center mb-4">
+          <h2 className="text-3xl font-bold text-center mb-4">
             AI活用事例
           </h2>
           <p className="text-center text-muted-foreground mb-12">
             様々な業務シーンでAIを活用し、効率化を実現します
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg rounded-none">
+            <Card>
               <CardContent className="pt-6">
                 <Users className="w-12 h-12 text-primary mb-4" />
-                <h3 className="jp-heading text-xl font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   カスタマーサクセス
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -121,10 +115,10 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg rounded-none">
+            <Card>
               <CardContent className="pt-6">
                 <Building2 className="w-12 h-12 text-primary mb-4" />
-                <h3 className="jp-heading text-xl font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   人事・採用
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -143,10 +137,10 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-none shadow-lg rounded-none">
+            <Card>
               <CardContent className="pt-6">
                 <FileSpreadsheet className="w-12 h-12 text-primary mb-4" />
-                <h3 className="jp-heading text-xl font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   事務・経理・財務
                 </h3>
                 <ul className="space-y-2 text-muted-foreground">
@@ -169,15 +163,15 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 jp-pattern">
+      <section className="py-20 bg-muted">
         <div className="container text-center">
-          <h2 className="jp-heading text-3xl font-bold mb-4">
+          <h2 className="text-3xl font-bold mb-4">
             AI導入でビジネスを変革する
           </h2>
           <p className="text-muted-foreground mb-8">
             まずは無料相談から始めてみませんか？
           </p>
-          <Button asChild size="lg" className="rounded-none">
+          <Button asChild size="lg">
             <Link href="/contact">無料相談はこちら</Link>
           </Button>
         </div>
